@@ -259,6 +259,37 @@ class program
         }
         #endregion
 
+        #region Q15
+        void Q15()
+        {
+            Console.Write("Input starting number of range: ");
+            int start = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Input ending number of range: ");
+            int end = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"The prime numbers between {start} and {end} are:");
+
+            for (int i = start; i <= end; i++)
+            {
+                int count = 0;
+
+                for (int j = 1; j <= i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        count++;
+                    }
+                }
+
+                if (count == 2)
+                {
+                    Console.Write(i + " ");
+                }
+            }
+        }
+        #endregion
+
     }
 }
 
